@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
-def cfg = rootProject.ext.configuration;
+def cfg = rootProject.ext.configuration
+def libs = rootProject.ext.libraries
 
 android {
     compileSdkVersion cfg.compileSdkVersion
@@ -32,4 +32,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    // Gson
+    implementation "com.google.code.gson:gson:$libs.gsonVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$libs.retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp:$libs.okhttpVersion"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$libs.daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$libs.daggerVersion"
 }
