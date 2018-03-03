@@ -6,6 +6,13 @@ ext {
             versionCode       : 1,
             versionName       : "1.0"
     ]
+
+    libraries = [
+            daggerVersion     : "2.13",
+            gsonVersion       : "2.8.2",
+            retrofitVersion   : "2.3.0",
+            okhttpVersion     : "3.10.0"
+    ]
 }
 
 
