@@ -1,17 +1,28 @@
 ext {
     configuration = [
-            compileSdkVersion : 26,
-            minSdkVersion     : 16,
-            targetSdkVersion  : 26,
-            versionCode       : 1,
-            versionName       : "1.0"
+            compileSdkVersion        : 26,
+            minSdkVersion            : 16,
+            targetSdkVersion         : 26,
+            versionCode              : 1,
+            versionName              : "1.0"
     ]
 
     libraries = [
-            daggerVersion     : "2.13",
-            gsonVersion       : "2.8.2",
-            retrofitVersion   : "2.3.0",
-            okhttpVersion     : "3.10.0"
+            appCompatVersion                  : "26.1.0",
+            constraintLayoutVersion           : "1.0.2",
+            daggerVersion                     : "2.13",
+            gsonVersion                       : "2.8.2",
+            retrofitVersion                   : "2.3.0",
+            okhttpVersion                     : "3.10.0",
+            rxJavaAdpaperVersion              : "2.3.0",
+            retrofitGsonConverterVersion      : "2.3.0"
+    ]
+
+    testLibraries = [
+            androidTestRunnerVersion : "1.0.1",
+            espressoCoreVersion      : "3.0.1",
+            jUnitVersion             : "4.12",
+            mockitoCoreVersion       : "2.11.0"
     ]
 }
 
