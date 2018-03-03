@@ -30,6 +30,7 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$libs.appCompatVersion"
     implementation "com.android.support.constraint:constraint-layout:$libs.constraintLayoutVersion"
+    implementation "com.android.support:design:27.1.0"
 
     // Gson
     implementation "com.google.code.gson:gson:$libs.gsonVersion"
@@ -37,8 +38,12 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$libs.retrofitVersion"
     implementation "com.squareup.okhttp3:okhttp:$libs.okhttpVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$libs.rxJavaAdpaperVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$libs.rxJavaAdapterVersion"
     implementation "com.squareup.retrofit2:converter-gson:$libs.retrofitGsonConverterVersion"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$libs.rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$libs.rxJavaVersion"
 
     // Dagger
     implementation "com.google.dagger:dagger:$libs.daggerVersion"
