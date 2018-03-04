@@ -81,7 +81,7 @@ abstract class BaseActivity : AppCompatActivity() {
      * Override this method to configure your activity or start views
      */
 
-    protected fun initActivity() {
+    protected open fun initActivity() {
 
     }
 }
