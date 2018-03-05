@@ -1,7 +1,7 @@
 package fr.northborders.trendingrepos.ui.mapper
 
 import fr.northborders.trendingrepos.domain.model.User
-import fr.northborders.trendingrepos.ui.UserViewModel
+import fr.northborders.trendingrepos.ui.model.UserViewModel
 import fr.northborders.trendingrepos.ui.factory.UserViewModelFactory
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -37,15 +37,5 @@ class UserViewModelMapperTest {
         assertEquals(userViewModel.receivedEventsUrl, user.receivedEventsUrl)
         assertEquals(userViewModel.type, user.type)
         assertEquals(userViewModel.siteAdmin, user.siteAdmin)
-        assertEquals(userViewModel.score, user.score)
-        assertEquals(userViewModel.email, user.email)
-        assertEquals(userViewModel.starGazersCount, user.starGazersCount)
-        assertEquals(userViewModel.company, user.company)
-        assertEquals(userViewModel.blog, user.blog)
-        assertEquals(userViewModel.location, user.location)
-        assertEquals(userViewModel.createdAt, user.createdAt)
-        assertEquals(userViewModel.updatedAt, user.updatedAt)
-        assertEquals(userViewModel.forks, user.forks)
-        assertEquals(userViewModel.openIssues, user.openIssues)
     }
 }

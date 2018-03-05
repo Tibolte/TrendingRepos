@@ -71,7 +71,7 @@ abstract class BaseFragment : Fragment(), Presenter.Ui {
      * @param view The Ui returned by [.onCreateView].
      */
 
-    protected fun initFragment(view: View) {
+    open fun initFragment(view: View) {
 
     }
 
@@ -79,7 +79,7 @@ abstract class BaseFragment : Fragment(), Presenter.Ui {
      * Called before to start all the presenter instances linked to the component lifecycle.
      * Override this method to configure your presenter with extra data if needed.
      */
-    protected fun initPresenter() {
+    open fun initPresenter() {
 
     }
 

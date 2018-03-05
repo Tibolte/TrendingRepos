@@ -2,6 +2,7 @@ package fr.northborders.trendingrepos.ui
 
 import fr.northborders.trendingrepos.domain.usecase.GetRepos
 import fr.northborders.trendingrepos.ui.base.BasePresenterLoader
+import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -16,7 +17,7 @@ open class ReposPresenter @Inject constructor(private val getRepos: GetRepos) : 
 
         ui.showLoading()
 
-        val disposable = getRepos.execute("")
+        val disposable = getRepos.execute("language:java", "stars", 1)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ it ->

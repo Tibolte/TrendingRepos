@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui
+package fr.northborders.trendingrepos.ui.model
 
 import fr.northborders.trendingrepos.domain.model.User
 
@@ -10,26 +10,16 @@ data class UserViewModel(
     val url: String,
     val htmlUrl: String,
     val followersUrl: String,
-    val followeringUrl: String,
+    val followeringUrl: String? = "",
     val gistsUrl: String,
-    val stattedUrl: String,
+    val stattedUrl: String? = "",
     val subscriptionsUrl: String,
     val organizationsUrl: String,
     val reposUrl: String,
     val eventsUrl: String,
     val receivedEventsUrl: String,
     val type: String,
-    val siteAdmin: Boolean,
-    val score: Int,
-    val email: String,
-    val starGazersCount: String,
-    val company: String,
-    val blog: String,
-    val location: String,
-    val createdAt: String,
-    val updatedAt: String,
-    val forks: Int,
-    val openIssues: Int
+    val siteAdmin: Boolean
 ) {
     object Mapper {
         fun from(user: User) =
@@ -50,17 +40,7 @@ data class UserViewModel(
                 user.eventsUrl,
                 user.receivedEventsUrl,
                 user.type,
-                user.siteAdmin,
-                user.score,
-                user.email,
-                user.starGazersCount,
-                user.company,
-                user.blog,
-                user.location,
-                user.createdAt,
-                user.updatedAt,
-                user.forks,
-                user.openIssues
+                user.siteAdmin
             )
     }
 }

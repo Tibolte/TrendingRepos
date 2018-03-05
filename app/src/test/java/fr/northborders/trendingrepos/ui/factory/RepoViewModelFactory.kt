@@ -3,7 +3,7 @@ package fr.northborders.trendingrepos.ui.factory
 import fr.northborders.trendingrepos.domain.factory.DataFactory
 import fr.northborders.trendingrepos.domain.factory.UserFactory
 import fr.northborders.trendingrepos.domain.model.Repo
-import fr.northborders.trendingrepos.ui.RepoViewModel
+import fr.northborders.trendingrepos.ui.model.RepoViewModel
 
 class RepoViewModelFactory {
     companion object {

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- font sizes -->
+    <dimen name="font_larger">18sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_tiny">9sp</dimen>
+
+    <!-- sizes of views -->
+    <dimen name="height_huge">72dp</dimen>
+    <dimen name="height_large">60dp</dimen>
+    <dimen name="height_normal">40dp</dimen>
+    <dimen name="height_small">32dp</dimen>
+    <dimen name="height_tiny">20dp</dimen>
+
+    <!-- padding -->
+    <dimen name="padding_huge">20dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_large">15dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_tiny">2dp</dimen>
+
+    <!-- margin -->
+    <dimen name="margin_128">128dp</dimen>
+    <dimen name="margin_huger">64dp</dimen>
+    <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_huge">30dp</dimen>
+    <dimen name="margin_large">15dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_tiny">2dp</dimen>
+</resources>

@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui
+package fr.northborders.trendingrepos.ui.model
 
 import fr.northborders.trendingrepos.domain.model.Repo
 
@@ -11,7 +11,7 @@ data class RepoViewModel(
     val description: String,
     val fork: Boolean,
     val downloadUrl: String,
-    val issuesUrl: String,
+    val issuesUrl: String?,
     val releasesUrl: String,
     val createdAt: String,
     val updatedAt: String,
@@ -25,7 +25,7 @@ data class RepoViewModel(
     val watchersCount: Int,
     val language: String,
     val forksCount: Int,
-    val mirrorUrl: String,
+    val mirrorUrl: String?,
     val openIssuesCount: Int,
     val forks: Int,
     val openIssues: Int,

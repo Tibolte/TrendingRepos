@@ -2,7 +2,7 @@ package fr.northborders.trendingrepos.ui.factory
 
 import fr.northborders.trendingrepos.domain.factory.DataFactory
 import fr.northborders.trendingrepos.domain.model.User
-import fr.northborders.trendingrepos.ui.UserViewModel
+import fr.northborders.trendingrepos.ui.model.UserViewModel
 
 class UserViewModelFactory {
     companion object {
@@ -24,17 +24,7 @@ class UserViewModelFactory {
                 DataFactory.randomString(),
                 DataFactory.randomString(),
                 DataFactory.randomString(),
-                true,
-                DataFactory.randomInt(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomInt(),
-                DataFactory.randomInt()
+                true
             )
         }
 
@@ -56,17 +46,7 @@ class UserViewModelFactory {
                 DataFactory.randomString(),
                 DataFactory.randomString(),
                 DataFactory.randomString(),
-                true,
-                DataFactory.randomInt(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomString(),
-                DataFactory.randomInt(),
-                DataFactory.randomInt()
+                true
             )
         }
     }
