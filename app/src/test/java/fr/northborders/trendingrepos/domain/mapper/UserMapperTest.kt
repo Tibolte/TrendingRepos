@@ -37,15 +37,5 @@ class UserMapperTest {
         assertEquals(userEntity.receivedEventsUrl, user.receivedEventsUrl)
         assertEquals(userEntity.type, user.type)
         assertEquals(userEntity.siteAdmin, user.siteAdmin)
-        assertEquals(userEntity.score, user.score)
-        assertEquals(userEntity.email, user.email)
-        assertEquals(userEntity.starGazersCount, user.starGazersCount)
-        assertEquals(userEntity.company, user.company)
-        assertEquals(userEntity.blog, user.blog)
-        assertEquals(userEntity.location, user.location)
-        assertEquals(userEntity.createdAt, user.createdAt)
-        assertEquals(userEntity.updatedAt, user.updatedAt)
-        assertEquals(userEntity.forks, user.forks)
-        assertEquals(userEntity.openIssues, user.openIssues)
     }
 }

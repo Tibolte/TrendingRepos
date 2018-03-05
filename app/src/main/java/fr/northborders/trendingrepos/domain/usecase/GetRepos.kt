@@ -7,7 +7,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 open class GetRepos @Inject constructor(@Named("apiGithubDataSource") private val repository: Repository) {
-    fun execute(query: String): Single<List<Repo>> {
-        return repository.getRepos(query)
+    fun execute(query: String, sort: String, page: Int): Single<List<Repo>> {
+        return repository.getRepos(query, sort, page)
     }
 }

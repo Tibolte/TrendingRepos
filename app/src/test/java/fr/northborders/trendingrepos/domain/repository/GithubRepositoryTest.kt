@@ -3,6 +3,7 @@ package fr.northborders.trendingrepos.domain.repository
 import fr.northborders.trendingrepos.data.data.ApiGithubDataSource
 import fr.northborders.trendingrepos.data.data.GithubService
 import fr.northborders.trendingrepos.data.model.RepoEntity
+import fr.northborders.trendingrepos.data.model.WrapList
 import fr.northborders.trendingrepos.domain.factory.RepoFactory
 import io.reactivex.Single
 import org.junit.Before
@@ -33,17 +34,17 @@ class GithubRepositoryTest {
     fun shouldReturnRepoEntityList() {
         val repoList = givenARepoEntityListWithData()
 
-        repository.getRepos("")
+        repository.getRepos("", "", 1)
             .test()
             .assertNoErrors()
             .assertValue {
-                it.size == repoList.size && it[0].id == repoList[0].id
+                it.size == repoList.items.size && it[0].id == repoList.items[0].id
             }
     }
 
-    private fun givenARepoEntityListWithData(): List<RepoEntity> {
-        val repoList = RepoFactory.makeRepoEntityList(20)
-        given(dataSource.getRepos("")).willReturn(Single.just(repoList))
+    private fun givenARepoEntityListWithData(): WrapList {
+        val repoList = WrapList(20, false,RepoFactory.makeRepoEntityList(20))
+        given(dataSource.getRepos("", "", 1)).willReturn(Single.just(repoList))
         return repoList
     }
 }

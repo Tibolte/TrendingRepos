@@ -27,7 +27,7 @@ class GetReposTest {
     @Test
     fun shouldReturnARepoList() {
         val repoList = givenARepoListWithData()
-        getRepos.execute("")
+        getRepos.execute("", "", 1)
             .test()
             .assertNoErrors()
             .assertValue {
@@ -37,7 +37,7 @@ class GetReposTest {
 
     private fun givenARepoListWithData(): List<Repo> {
         val repoList = RepoFactory.makeRepoList(20)
-        given(getRepos.execute("")).willReturn(Single.just(repoList))
+        given(getRepos.execute("", "", 1)).willReturn(Single.just(repoList))
         return repoList
     }
 }

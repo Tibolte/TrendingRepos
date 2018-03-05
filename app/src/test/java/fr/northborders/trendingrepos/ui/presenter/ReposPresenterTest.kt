@@ -3,7 +3,7 @@ package fr.northborders.trendingrepos.ui.presenter
 import fr.northborders.trendingrepos.domain.model.Repo
 import fr.northborders.trendingrepos.domain.repository.GithubRepository
 import fr.northborders.trendingrepos.domain.usecase.GetRepos
-import fr.northborders.trendingrepos.ui.RepoViewModel
+import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.ReposPresenter
 import fr.northborders.trendingrepos.ui.ReposUi
 import fr.northborders.trendingrepos.ui.RxAndroidRule
@@ -80,13 +80,13 @@ class ReposPresenterTest {
 
     private fun givenARepoListWithData(): List<Repo> {
         val repoList = RepoViewModelFactory.makeRepoList(20)
-        given(getRepos.execute("")).willReturn(Single.just(repoList))
+        given(getRepos.execute("language:java", "stars", 1)).willReturn(Single.just(repoList))
         return repoList
     }
 
     private fun givenAnEmptyRepoList() =
-        given(getRepos.execute("")).willReturn(Single.just(emptyList<Repo>()))
+        given(getRepos.execute("language:java", "stars", 1)).willReturn(Single.just(emptyList<Repo>()))
 
     private fun givenAnErrorRepoList() =
-        given(getRepos.execute("")).willReturn(Single.error(Throwable("An error occurred")))
+        given(getRepos.execute("language:java", "stars", 1)).willReturn(Single.error(Throwable("An error occurred")))
 }

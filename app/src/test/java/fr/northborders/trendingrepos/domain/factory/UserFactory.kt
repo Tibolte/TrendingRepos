@@ -25,17 +25,7 @@ class UserFactory {
                 randomString(),
                 randomString(),
                 randomString(),
-                true,
-                randomInt(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomInt(),
-                randomInt()
+                true
             )
         }
 
@@ -57,17 +47,7 @@ class UserFactory {
                 randomString(),
                 randomString(),
                 randomString(),
-                true,
-                randomInt(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomString(),
-                randomInt(),
-                randomInt()
+                true
             )
         }
     }

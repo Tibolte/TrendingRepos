@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TrendingRepos</string>
+    <string name="android_trending_repos">Android Trending Repos</string>
 </resources>
