@@ -57,6 +57,9 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:$libs.circleimageviewVersion"
     implementation "com.squareup.picasso:picasso:$libs.picassoVersion"
 
+    // Mvp
+    implementation project(':mvp')
+
     // Tests
     androidTestImplementation "com.android.support.test:runner:$testLibs.androidTestRunnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$testLibs.espressoCoreVersion"

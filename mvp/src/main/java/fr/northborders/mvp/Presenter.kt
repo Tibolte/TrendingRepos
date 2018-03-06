@@ -1,5 +1,4 @@
-package fr.northborders.trendingrepos.ui.base
-
+package fr.northborders.mvp
 
 interface Presenter<V> {
 

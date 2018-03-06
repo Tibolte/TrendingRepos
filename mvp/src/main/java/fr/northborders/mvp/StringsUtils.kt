@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.base
+package fr.northborders.mvp
 
 object StringsUtils {
     val EXTRA_ARGUMENTS = "extra_arguments"

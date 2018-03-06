@@ -14,7 +14,7 @@ import fr.northborders.trendingrepos.ui.ReposAdapter
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.ReposPresenter
 import fr.northborders.trendingrepos.ui.ReposUi
-import fr.northborders.trendingrepos.ui.base.BaseFragment
+import fr.northborders.mvp.BaseFragment
 import javax.inject.Inject
 
 class ReposFragment : BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadMoreListener {
