@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ProgressBar
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
+import fr.northborders.trendingrepos.ui.RecyclerScrollMoreListener
 import fr.northborders.trendingrepos.ui.ReposAdapter
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.ReposPresenter
@@ -16,7 +17,7 @@ import fr.northborders.trendingrepos.ui.ReposUi
 import fr.northborders.trendingrepos.ui.base.BaseFragment
 import javax.inject.Inject
 
-class ReposFragment : BaseFragment(), ReposUi {
+class ReposFragment : BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadMoreListener {
 
     override val layoutResId: Int
         get() = R.layout.repos_fragment
@@ -55,7 +56,6 @@ class ReposFragment : BaseFragment(), ReposUi {
     override fun showRepos(reposList: List<RepoViewModel>) {
         Log.d(ReposFragment::class.simpleName, "show repos")
         adapter.addReposList(reposList)
-        adapter.notifyDataSetChanged()
     }
 
     override fun showEmptyMessage() {
@@ -68,12 +68,17 @@ class ReposFragment : BaseFragment(), ReposUi {
 
     override fun showLoading() {
         Log.d(ReposFragment::class.simpleName, "show loading")
-        progressbar?.visibility = View.GONE
+        progressbar?.visibility = View.VISIBLE
     }
 
     override fun hideLoading() {
         Log.d(ReposFragment::class.simpleName, "hide loading")
         progressbar?.visibility = View.GONE
+    }
+
+    override fun onLoadMore(page: Int, total: Int) {
+        Log.d(ReposFragment::class.simpleName, String.format("Load more with page:%d and total:%d", page, total))
+        presenter.loadMore(page)
     }
 
     fun initViews(view: View) {
@@ -93,7 +98,9 @@ class ReposFragment : BaseFragment(), ReposUi {
 
     fun initRecycler(view: View) {
         val recyclerview = view.findViewById<RecyclerView>(R.id.list_repos)
-        recyclerview.layoutManager = LinearLayoutManager(activity)
+        val layoutManager = LinearLayoutManager(activity)
+        recyclerview.layoutManager = layoutManager
         recyclerview.adapter = adapter
+        recyclerview.addOnScrollListener(RecyclerScrollMoreListener(layoutManager, this))
     }
 }
