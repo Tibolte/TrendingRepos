@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui
+package fr.northborders.trendingrepos.ui.repos
 
 import android.support.v7.widget.RecyclerView
 import android.view.View

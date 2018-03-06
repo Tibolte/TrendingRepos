@@ -4,8 +4,8 @@ import fr.northborders.trendingrepos.domain.model.Repo
 import fr.northborders.trendingrepos.domain.repository.GithubRepository
 import fr.northborders.trendingrepos.domain.usecase.GetRepos
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
-import fr.northborders.trendingrepos.ui.ReposPresenter
-import fr.northborders.trendingrepos.ui.ReposUi
+import fr.northborders.trendingrepos.ui.repos.ReposPresenter
+import fr.northborders.trendingrepos.ui.repos.ReposUi
 import fr.northborders.trendingrepos.ui.RxAndroidRule
 import fr.northborders.trendingrepos.ui.factory.RepoViewModelFactory
 import io.reactivex.Single
