@@ -14,10 +14,18 @@ open class ReposPresenter @Inject constructor(private val getRepos: GetRepos) : 
 
     override fun start() {
         super.start()
+        loadMore(1)
+    }
 
+    override fun terminate() {
+        super.terminate()
+        compositeDisposable.clear()
+    }
+
+    fun loadMore(currentPage: Int) {
         ui.showLoading()
 
-        val disposable = getRepos.execute("language:java", "stars", 1)
+        val disposable = getRepos.execute("language:java", "stars", currentPage)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ it ->
@@ -35,10 +43,5 @@ open class ReposPresenter @Inject constructor(private val getRepos: GetRepos) : 
             }, { ui.hideLoading(); ui.showErrorMessage() })
 
         compositeDisposable.add(disposable)
-    }
-
-    override fun terminate() {
-        super.terminate()
-        compositeDisposable.clear()
     }
 }
