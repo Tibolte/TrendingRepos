@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.base
+package fr.northborders.mvp
 
 import android.os.Bundle
 import android.support.annotation.IdRes

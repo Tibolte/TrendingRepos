@@ -1,9 +1,8 @@
-package fr.northborders.trendingrepos.ui.base
+package fr.northborders.mvp
 
 import android.support.annotation.IdRes
 import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
-import fr.northborders.trendingrepos.R
 
 abstract class BaseFragmentActivity : BaseActivity() {
 

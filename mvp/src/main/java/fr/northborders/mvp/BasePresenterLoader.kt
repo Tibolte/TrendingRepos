@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.base
+package fr.northborders.mvp
 
 abstract class BasePresenterLoader<V : BasePresenterLoader.Ui> : BasePresenter<V>() {
 

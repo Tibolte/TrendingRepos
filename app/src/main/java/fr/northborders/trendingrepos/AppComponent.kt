@@ -4,7 +4,7 @@ import dagger.Component
 import fr.northborders.trendingrepos.data.di.DataModule
 import fr.northborders.trendingrepos.domain.di.DomainModule
 import fr.northborders.trendingrepos.ui.di.UiModule
-import fr.northborders.trendingrepos.ui.view.ReposFragment
+import fr.northborders.trendingrepos.ui.repos.view.ReposFragment
 import javax.inject.Singleton
 
 @Component(modules = arrayOf(DataModule::class, DomainModule::class, UiModule::class))
