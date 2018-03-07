@@ -1,6 +1,7 @@
 package fr.northborders.trendingrepos.ui.model
 
 import fr.northborders.trendingrepos.domain.model.User
+import java.io.Serializable
 
 data class UserViewModel(
     val login: String,
@@ -20,7 +21,7 @@ data class UserViewModel(
     val receivedEventsUrl: String,
     val type: String,
     val siteAdmin: Boolean
-) {
+) : Serializable {
     object Mapper {
         fun from(user: User) =
             UserViewModel(

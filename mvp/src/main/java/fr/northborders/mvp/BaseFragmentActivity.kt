@@ -54,4 +54,15 @@ abstract class BaseFragmentActivity : BaseActivity() {
             fragmentManager.beginTransaction().add(containerId!!, nestedTargetFragment).commit()
         }
     }
+
+    protected fun replaceFragment(fragment: Fragment) {
+        var containerId = R.id.container
+        if (containerId != null) {
+            containerId = containerId
+        }
+
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(containerId, fragment)
+        transaction.commit()
+    }
 }

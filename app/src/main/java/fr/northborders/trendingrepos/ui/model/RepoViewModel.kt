@@ -1,6 +1,7 @@
 package fr.northborders.trendingrepos.ui.model
 
 import fr.northborders.trendingrepos.domain.model.Repo
+import java.io.Serializable
 
 data class RepoViewModel(
     val id: Long,
@@ -33,7 +34,7 @@ data class RepoViewModel(
     val defaultBranch: String,
     val score: Int,
     val owner: UserViewModel
-) {
+) : Serializable {
     object Mapper {
         fun from(repo: Repo) =
             RepoViewModel(
