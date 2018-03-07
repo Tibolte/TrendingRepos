@@ -39,16 +39,6 @@ data class UserEntity(
         private const val RECEIVED_EVENTS_URL = "received_events_url"
         private const val TYPE = "type"
         private const val SITE_ADMIN = "site_admin"
-        private const val SCORE = "score"
-        private const val EMAIL = "email"
-        private const val NAME = "name"
-        private const val COMPANY = "company"
-        private const val BLOG = "blog"
-        private const val LOCATION = "location"
-        private const val CREATED_AT = "created_at"
-        private const val UPDATED_AT = "updated_at"
-        private const val FOLLOWERS = "followers"
-        private const val FOLLOWING = "following"
     }
 }
 
