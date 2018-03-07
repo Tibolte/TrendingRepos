@@ -10,6 +10,7 @@ import com.squareup.picasso.Picasso
 import fr.northborders.mvp.BaseFragment
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
+import fr.northborders.trendingrepos.ui.model.RepoContentViewModel
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.repodetail.RepoDetailPresenter
 import fr.northborders.trendingrepos.ui.repodetail.RepoDetailUi
@@ -63,6 +64,14 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
 
     override fun hideLoading() {
         Log.d(RepoDetailFragment::class.simpleName, "hide loading")
+    }
+
+    override fun showReadMe(repoContentViewModel: RepoContentViewModel) {
+        Log.d(RepoDetailFragment::class.simpleName, "show readme")
+    }
+
+    override fun showErrorMessage() {
+        Log.d(RepoDetailFragment::class.simpleName, "show error message")
     }
 
     fun initViews(view: View) {
