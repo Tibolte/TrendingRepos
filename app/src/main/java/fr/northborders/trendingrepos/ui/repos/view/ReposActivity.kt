@@ -10,5 +10,5 @@ class ReposActivity : BaseFragmentActivity() {
         get() = ReposFragment.newInstance()
 
     override val layoutResId: Int
-        @LayoutRes get() = R.layout.repos_activity
+        @LayoutRes get() = R.layout.activity_base
 }

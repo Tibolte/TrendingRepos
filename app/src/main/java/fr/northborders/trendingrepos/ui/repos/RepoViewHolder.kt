@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.squareup.picasso.Picasso
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
+import fr.northborders.trendingrepos.ui.repodetail.view.RepoDetailActivity
 import kotlinx.android.synthetic.main.item_repo.view.*
 
 class RepoViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
@@ -12,6 +13,9 @@ class RepoViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
         itemView.repo_name.text = repoViewModel.name
         itemView.repo_desc.text = repoViewModel.description
         itemView.repo_stars.text = String.format("Stars: %d", repoViewModel.starGazersCount)
-        itemView.setOnClickListener {  }
+        itemView.setOnClickListener {
+            val intent = RepoDetailActivity.newIntent(itemView.context, repoViewModel)
+            itemView.context.startActivity(intent)
+        }
     }
 }

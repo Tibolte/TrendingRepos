@@ -4,6 +4,7 @@ import dagger.Component
 import fr.northborders.trendingrepos.data.di.DataModule
 import fr.northborders.trendingrepos.domain.di.DomainModule
 import fr.northborders.trendingrepos.ui.di.UiModule
+import fr.northborders.trendingrepos.ui.repodetail.view.RepoDetailFragment
 import fr.northborders.trendingrepos.ui.repos.view.ReposFragment
 import javax.inject.Singleton
 
@@ -11,4 +12,6 @@ import javax.inject.Singleton
 @Singleton
 interface AppComponent {
     fun inject(reposFragment: ReposFragment)
+
+    fun inject(repoDetailFragment: RepoDetailFragment)
 }

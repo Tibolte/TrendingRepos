@@ -20,7 +20,7 @@ import javax.inject.Inject
 class ReposFragment : BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadMoreListener {
 
     override val layoutResId: Int
-        get() = R.layout.repos_fragment
+        get() = R.layout.fragment_repos
 
     @Inject lateinit var presenter: ReposPresenter
 
