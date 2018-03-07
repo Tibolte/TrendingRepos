@@ -7,8 +7,8 @@ import fr.northborders.trendingrepos.domain.usecase.Markdown
 import fr.northborders.trendingrepos.ui.RxAndroidRule
 import fr.northborders.trendingrepos.ui.factory.RepoContentViewModelFactory
 import fr.northborders.trendingrepos.ui.model.RepoContentViewModel
-import fr.northborders.trendingrepos.ui.repodetail.RepoDetailPresenter
-import fr.northborders.trendingrepos.ui.repodetail.RepoDetailUi
+import fr.northborders.trendingrepos.ui.screens.repodetail.RepoDetailPresenter
+import fr.northborders.trendingrepos.ui.screens.repodetail.RepoDetailUi
 import io.reactivex.Single
 import org.junit.Before
 import org.junit.ClassRule

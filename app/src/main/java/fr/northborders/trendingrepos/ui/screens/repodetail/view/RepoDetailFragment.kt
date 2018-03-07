@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.repodetail.view
+package fr.northborders.trendingrepos.ui.screens.repodetail.view
 
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
@@ -17,8 +17,8 @@ import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
 import fr.northborders.trendingrepos.ui.model.RepoContentViewModel
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
-import fr.northborders.trendingrepos.ui.repodetail.RepoDetailPresenter
-import fr.northborders.trendingrepos.ui.repodetail.RepoDetailUi
+import fr.northborders.trendingrepos.ui.screens.repodetail.RepoDetailPresenter
+import fr.northborders.trendingrepos.ui.screens.repodetail.RepoDetailUi
 import javax.inject.Inject
 
 class RepoDetailFragment: BaseFragment(), RepoDetailUi {

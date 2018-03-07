@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.repos
+package fr.northborders.trendingrepos.ui.screens.repos
 
 import fr.northborders.mvp.BasePresenterLoader
 import fr.northborders.trendingrepos.ui.model.RepoViewModel

@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.repos.view
+package fr.northborders.trendingrepos.ui.screens.repos.view
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -9,11 +9,11 @@ import android.view.View
 import android.widget.ProgressBar
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
-import fr.northborders.trendingrepos.ui.repos.RecyclerScrollMoreListener
-import fr.northborders.trendingrepos.ui.repos.ReposAdapter
+import fr.northborders.trendingrepos.ui.screens.repos.RecyclerScrollMoreListener
+import fr.northborders.trendingrepos.ui.screens.repos.ReposAdapter
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
-import fr.northborders.trendingrepos.ui.repos.ReposPresenter
-import fr.northborders.trendingrepos.ui.repos.ReposUi
+import fr.northborders.trendingrepos.ui.screens.repos.ReposPresenter
+import fr.northborders.trendingrepos.ui.screens.repos.ReposUi
 import fr.northborders.mvp.BaseFragment
 import javax.inject.Inject
 

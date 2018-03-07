@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.repodetail
+package fr.northborders.trendingrepos.ui.screens.repodetail
 
 import fr.northborders.mvp.BasePresenterLoader
 import fr.northborders.trendingrepos.domain.usecase.GetReadme

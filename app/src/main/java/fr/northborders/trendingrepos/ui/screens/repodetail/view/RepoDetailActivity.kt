@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.ui.repodetail.view
+package fr.northborders.trendingrepos.ui.screens.repodetail.view
 
 import android.content.Context
 import android.content.Intent

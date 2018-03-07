@@ -12,14 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="fr.northborders.trendingrepos.ui.repos.view.ReposActivity">
+        <activity android:name="fr.northborders.trendingrepos.ui.screens.repos.view.ReposActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.repodetail.view.RepoDetailActivity"/>
+        <activity android:name="fr.northborders.trendingrepos.ui.screens.repodetail.view.RepoDetailActivity"/>
     </application>
 
 </manifest>

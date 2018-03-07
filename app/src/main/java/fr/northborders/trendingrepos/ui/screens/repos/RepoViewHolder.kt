@@ -1,10 +1,10 @@
-package fr.northborders.trendingrepos.ui.repos
+package fr.northborders.trendingrepos.ui.screens.repos
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.squareup.picasso.Picasso
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
-import fr.northborders.trendingrepos.ui.repodetail.view.RepoDetailActivity
+import fr.northborders.trendingrepos.ui.screens.repodetail.view.RepoDetailActivity
 import kotlinx.android.synthetic.main.item_repo.view.*
 
 class RepoViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
