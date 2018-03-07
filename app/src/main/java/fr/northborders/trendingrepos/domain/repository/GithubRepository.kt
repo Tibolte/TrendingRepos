@@ -1,6 +1,6 @@
 package fr.northborders.trendingrepos.domain.repository
 
-import fr.northborders.trendingrepos.data.data.ApiGithubDataSource
+import fr.northborders.trendingrepos.data.remote.ApiGithubDataSource
 import fr.northborders.trendingrepos.domain.model.Repo
 import fr.northborders.trendingrepos.domain.model.RepoContent
 import io.reactivex.Single

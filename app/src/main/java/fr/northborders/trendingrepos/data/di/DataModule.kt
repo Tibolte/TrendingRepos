@@ -4,9 +4,9 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import fr.northborders.trendingrepos.data.data.ApiGithubDataSource
-import fr.northborders.trendingrepos.data.data.GithubService
-import fr.northborders.trendingrepos.data.data.MarkdownService
+import fr.northborders.trendingrepos.data.remote.ApiGithubDataSource
+import fr.northborders.trendingrepos.data.remote.GithubService
+import fr.northborders.trendingrepos.data.remote.MarkdownService
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
@@ -16,7 +16,6 @@ import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.io.IOException
 import java.lang.reflect.Type
 import javax.inject.Singleton
 

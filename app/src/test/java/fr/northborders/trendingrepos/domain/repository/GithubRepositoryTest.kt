@@ -1,10 +1,9 @@
 package fr.northborders.trendingrepos.domain.repository
 
-import fr.northborders.trendingrepos.data.data.ApiGithubDataSource
-import fr.northborders.trendingrepos.data.data.GithubService
-import fr.northborders.trendingrepos.data.data.MarkdownService
+import fr.northborders.trendingrepos.data.remote.ApiGithubDataSource
+import fr.northborders.trendingrepos.data.remote.GithubService
+import fr.northborders.trendingrepos.data.remote.MarkdownService
 import fr.northborders.trendingrepos.data.model.RepoContentEntity
-import fr.northborders.trendingrepos.data.model.RepoEntity
 import fr.northborders.trendingrepos.data.model.WrapList
 import fr.northborders.trendingrepos.domain.factory.RepoContentFactory
 import fr.northborders.trendingrepos.domain.factory.RepoFactory

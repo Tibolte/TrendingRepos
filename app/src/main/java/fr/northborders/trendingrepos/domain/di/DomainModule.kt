@@ -2,7 +2,7 @@ package fr.northborders.trendingrepos.domain.di
 
 import dagger.Module
 import dagger.Provides
-import fr.northborders.trendingrepos.data.data.ApiGithubDataSource
+import fr.northborders.trendingrepos.data.remote.ApiGithubDataSource
 import fr.northborders.trendingrepos.domain.repository.GithubRepository
 import fr.northborders.trendingrepos.domain.repository.Repository
 import fr.northborders.trendingrepos.domain.usecase.GetReadme

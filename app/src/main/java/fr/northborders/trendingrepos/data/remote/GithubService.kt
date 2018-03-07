@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.data.data
+package fr.northborders.trendingrepos.data.remote
 
 import fr.northborders.trendingrepos.data.model.RepoContentEntity
 import fr.northborders.trendingrepos.data.model.WrapList

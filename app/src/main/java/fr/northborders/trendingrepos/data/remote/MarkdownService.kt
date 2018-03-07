@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.data.data
+package fr.northborders.trendingrepos.data.remote
 
 import io.reactivex.Single
 import retrofit2.http.Body

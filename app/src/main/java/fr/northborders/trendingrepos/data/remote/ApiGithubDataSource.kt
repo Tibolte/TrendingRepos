@@ -1,4 +1,4 @@
-package fr.northborders.trendingrepos.data.data
+package fr.northborders.trendingrepos.data.remote
 
 import javax.inject.Inject
 
