@@ -105,6 +105,8 @@
 
                     <include layout="@layout/view_loading" />
 
+                    <include layout="@layout/view_error"/>
+
                 </FrameLayout>
 
             </LinearLayout>

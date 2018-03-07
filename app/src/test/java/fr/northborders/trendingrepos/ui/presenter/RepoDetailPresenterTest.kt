@@ -54,7 +54,7 @@ class RepoDetailPresenterTest {
 
         Mockito.verify(ui).showLoading()
         //Mockito.verify(ui).hideLoading()
-        Mockito.verify(ui).showReadMe(repoContentViewModel)
+        Mockito.verify(ui).readmeLoaded(repoContentViewModel)
     }
 
     @Test

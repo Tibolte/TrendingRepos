@@ -24,19 +24,19 @@ open class RepoDetailPresenter @Inject constructor(private val getReadme: GetRea
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ it ->
-                ui.showReadMe(RepoContentViewModel.Mapper.from(it))
+                ui.readmeLoaded(RepoContentViewModel.Mapper.from(it))
             }, {ui.hideLoading(); ui.showErrorMessage()})
 
         compositeDisposable.add(disposable)
     }
 
-    fun loadRawReadMe(readme: String) {
+    fun markdown(readme: String) {
         val disposable = markdown.execute(readme)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ it ->
                 ui.hideLoading()
-                ui.showRawReadMe(it)
+                ui.showMarkdown(it)
             }, {ui.hideLoading(); ui.showErrorMessage()})
 
         compositeDisposable.add(disposable)

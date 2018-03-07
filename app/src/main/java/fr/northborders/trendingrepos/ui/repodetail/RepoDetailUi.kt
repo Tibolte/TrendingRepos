@@ -5,9 +5,9 @@ import fr.northborders.trendingrepos.ui.model.RepoContentViewModel
 
 interface RepoDetailUi : BasePresenterLoader.Ui {
 
-    fun showReadMe(repoContentViewModel: RepoContentViewModel)
+    fun readmeLoaded(repoContentViewModel: RepoContentViewModel)
 
-    fun showRawReadMe(data: String)
+    fun showMarkdown(data: String)
 
     fun showErrorMessage()
 

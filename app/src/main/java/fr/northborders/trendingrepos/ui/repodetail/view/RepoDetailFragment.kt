@@ -29,6 +29,7 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
     var repo: RepoViewModel? = null
     var progressbar: ProgressBar? = null
     lateinit var webView: WebView
+    lateinit var errorView: TextView
     @Inject lateinit var presenter: RepoDetailPresenter
 
     companion object {
@@ -76,13 +77,13 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
         progressbar?.visibility = View.GONE
     }
 
-    override fun showReadMe(repoContentViewModel: RepoContentViewModel) {
+    override fun readmeLoaded(repoContentViewModel: RepoContentViewModel) {
         Log.d(RepoDetailFragment::class.simpleName, "show readme")
         val markdown = String(Base64.decode(repoContentViewModel.content, Base64.DEFAULT))
-        presenter.loadRawReadMe(markdown)
+        presenter.markdown(markdown)
     }
 
-    override fun showRawReadMe(data: String) {
+    override fun showMarkdown(data: String) {
         Log.d(RepoDetailFragment::class.simpleName, "show raw readme")
         val cssFile = "file:///android_asset/markdown_css_theme/classic.css"
         val html = "<link rel='stylesheet' type='text/css' href='$cssFile' />$data"
@@ -91,6 +92,7 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
 
     override fun showErrorMessage() {
         Log.d(RepoDetailFragment::class.simpleName, "show error message")
+        errorView.visibility = View.VISIBLE
     }
 
     fun initDagger() {
@@ -116,6 +118,8 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
 
         webView = view.findViewById<WebView>(R.id.repo_detail)
         webView.webViewClient = DefaultWebViewClient()
+
+        errorView = view.findViewById(R.id.errorView)
     }
 
     open class DefaultWebViewClient : WebViewClient() {
