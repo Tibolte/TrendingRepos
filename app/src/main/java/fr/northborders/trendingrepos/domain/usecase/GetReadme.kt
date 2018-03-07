@@ -7,7 +7,7 @@ import javax.inject.Inject
 import javax.inject.Named
 
 open class GetReadme @Inject constructor(@Named("apiGithubDataSource") private val repository: Repository) {
-    fun execute(owner: String, repoName: String): Single<RepoContent> {
+    fun execute(owner: String?, repoName: String?): Single<RepoContent> {
         return repository.getReadme(owner, repoName)
     }
 }

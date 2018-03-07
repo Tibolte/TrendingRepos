@@ -28,6 +28,7 @@ class RepoContentMapperTest {
         assertEquals(repoContentEntity.gitUrl, repoContent.gitUrl)
         assertEquals(repoContentEntity.downloadUrl, repoContent.downloadUrl)
         assertEquals(repoContentEntity.type, repoContent.type)
+        assertEquals(repoContentEntity.content, repoContent.content)
         assertEquals(repoContentEntity.encoding, repoContent.encoding)
     }
 }

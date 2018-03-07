@@ -28,6 +28,7 @@ class RepoContentViewModelMapperTest {
         assertEquals(repoContentViewModel.gitUrl, repoContent.gitUrl)
         assertEquals(repoContentViewModel.downloadUrl, repoContent.downloadUrl)
         assertEquals(repoContentViewModel.type, repoContent.type)
+        assertEquals(repoContentViewModel.content, repoContent.content)
         assertEquals(repoContentViewModel.encoding, repoContent.encoding)
     }
 }

@@ -12,6 +12,7 @@ data class RepoContent(
     val gitUrl: String,
     val downloadUrl: String,
     val type: String,
+    val content: String,
     val encoding: String
 ) {
     object Mapper {
@@ -26,6 +27,7 @@ data class RepoContent(
                 repoContentEntity.gitUrl,
                 repoContentEntity.downloadUrl,
                 repoContentEntity.type,
+                repoContentEntity.content,
                 repoContentEntity.encoding
             )
     }

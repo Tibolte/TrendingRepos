@@ -12,6 +12,7 @@ data class RepoContentViewModel(
     val gitUrl: String,
     val downloadUrl: String,
     val type: String,
+    val content: String,
     val encoding: String
 ) {
     object Mapper {
@@ -26,6 +27,7 @@ data class RepoContentViewModel(
                 repoContent.gitUrl,
                 repoContent.downloadUrl,
                 repoContent.type,
+                repoContent.content,
                 repoContent.encoding
             )
         }

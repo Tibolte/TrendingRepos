@@ -2,9 +2,14 @@ package fr.northborders.trendingrepos.ui.repodetail.view
 
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
+import android.util.Base64
 import android.util.Log
 import android.view.View
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import fr.northborders.mvp.BaseFragment
@@ -22,6 +27,8 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
         get() = R.layout.fragment_repo_detail
 
     var repo: RepoViewModel? = null
+    var progressbar: ProgressBar? = null
+    lateinit var webView: WebView
     @Inject lateinit var presenter: RepoDetailPresenter
 
     companion object {
@@ -48,6 +55,7 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
 
         if (arguments?.getSerializable(BUNDLE_EXTRA_REPO) != null) {
             repo = arguments?.getSerializable(BUNDLE_EXTRA_REPO) as RepoViewModel?
+            presenter.loadReadMe(repo?.owner?.login, repo?.name)
         }
 
         presenter.ui = this
@@ -60,18 +68,33 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
 
     override fun showLoading() {
         Log.d(RepoDetailFragment::class.simpleName, "show loading")
+        progressbar?.visibility = View.VISIBLE
     }
 
     override fun hideLoading() {
         Log.d(RepoDetailFragment::class.simpleName, "hide loading")
+        progressbar?.visibility = View.GONE
     }
 
     override fun showReadMe(repoContentViewModel: RepoContentViewModel) {
         Log.d(RepoDetailFragment::class.simpleName, "show readme")
+        val markdown = String(Base64.decode(repoContentViewModel.content, Base64.DEFAULT))
+        presenter.loadRawReadMe(markdown)
+    }
+
+    override fun showRawReadMe(data: String) {
+        Log.d(RepoDetailFragment::class.simpleName, "show raw readme")
+        val cssFile = "file:///android_asset/markdown_css_theme/classic.css"
+        val html = "<link rel='stylesheet' type='text/css' href='$cssFile' />$data"
+        webView.loadDataWithBaseURL(null, html,"text/html", "UTF-8", null)
     }
 
     override fun showErrorMessage() {
         Log.d(RepoDetailFragment::class.simpleName, "show error message")
+    }
+
+    fun initDagger() {
+        TrendingReposApplication.appComponent.inject(this)
     }
 
     fun initViews(view: View) {
@@ -88,9 +111,16 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
         view.findViewById<TextView>(R.id.repo_stars).text = String.format(getString(R.string.title_star), repo?.starGazersCount)
         view.findViewById<TextView>(R.id.repo_fork).text = String.format(getString(R.string.title_fork), repo?.forksCount)
         Picasso.with(context).load(repo?.owner?.avatarUrl).into(view.findViewById<ImageView>(R.id.repo_owner_avatar))
+
+        progressbar = view.findViewById(R.id.loadingView)
+
+        webView = view.findViewById<WebView>(R.id.repo_detail)
+        webView.webViewClient = DefaultWebViewClient()
     }
 
-    fun initDagger() {
-        TrendingReposApplication.appComponent.inject(this)
+    open class DefaultWebViewClient : WebViewClient() {
+        override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+            return true
+        }
     }
 }

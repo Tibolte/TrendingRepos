@@ -18,6 +18,7 @@ class RepoContentViewModelFactory {
                 randomString(),
                 randomString(),
                 randomString(),
+                randomString(),
                 randomString()
             )
 
@@ -27,6 +28,7 @@ class RepoContentViewModelFactory {
                 randomString(),
                 randomString(),
                 randomInt(),
+                randomString(),
                 randomString(),
                 randomString(),
                 randomString(),

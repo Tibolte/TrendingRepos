@@ -7,6 +7,8 @@ interface RepoDetailUi : BasePresenterLoader.Ui {
 
     fun showReadMe(repoContentViewModel: RepoContentViewModel)
 
+    fun showRawReadMe(data: String)
+
     fun showErrorMessage()
 
     override fun showLoading()

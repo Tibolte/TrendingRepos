@@ -19,9 +19,13 @@ open class GithubRepository @Inject constructor(private val apiGithubDataSource:
         }
     }
 
-    override fun getReadme(owner: String, repoName: String): Single<RepoContent> {
+    override fun getReadme(owner: String?, repoName: String?): Single<RepoContent> {
         return apiGithubDataSource.getReadme(owner, repoName).map {
             RepoContent.Mapper.from(it)
         }
+    }
+
+    override fun markdown(readme: String): Single<String> {
+        return apiGithubDataSource.markdown(readme)
     }
 }

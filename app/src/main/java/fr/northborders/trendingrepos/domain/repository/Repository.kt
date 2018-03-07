@@ -6,5 +6,6 @@ import io.reactivex.Single
 
 interface Repository {
     fun getRepos(query: String, sort: String, page: Int): Single<List<Repo>>
-    fun getReadme(owner: String, repoName: String): Single<RepoContent>
+    fun getReadme(owner: String?, repoName: String?): Single<RepoContent>
+    fun markdown(readme: String): Single<String>
 }

@@ -2,6 +2,7 @@ package fr.northborders.trendingrepos.domain.repository
 
 import fr.northborders.trendingrepos.data.data.ApiGithubDataSource
 import fr.northborders.trendingrepos.data.data.GithubService
+import fr.northborders.trendingrepos.data.data.MarkdownService
 import fr.northborders.trendingrepos.data.model.RepoContentEntity
 import fr.northborders.trendingrepos.data.model.RepoEntity
 import fr.northborders.trendingrepos.data.model.WrapList
@@ -21,14 +22,15 @@ class GithubRepositoryTest {
     @JvmField
     var mockitoRule = MockitoJUnit.rule()!!
 
-    @Mock lateinit var service: GithubService
+    @Mock lateinit var githubService: GithubService
+    @Mock lateinit var markdownService: MarkdownService
     @Mock lateinit var dataSource: ApiGithubDataSource
 
     private lateinit var repository: GithubRepository
 
     @Before
     fun setUp() {
-        dataSource = ApiGithubDataSource(service)
+        dataSource = ApiGithubDataSource(githubService, markdownService)
         repository = GithubRepository(dataSource)
     }
 
