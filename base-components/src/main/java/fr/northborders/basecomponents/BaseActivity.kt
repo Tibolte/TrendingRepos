@@ -1,11 +1,11 @@
-package fr.northborders.mvp
+package fr.northborders.basecomponents
 
 import android.os.Bundle
 import android.support.annotation.LayoutRes
 import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import fr.northborders.mvp.StringsUtils.EXTRA_ARGUMENTS
+import fr.northborders.basecomponents.StringsUtils.EXTRA_ARGUMENTS
 
 abstract class BaseActivity : AppCompatActivity() {
 

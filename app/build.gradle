@@ -58,7 +58,7 @@ dependencies {
     implementation "com.squareup.picasso:picasso:$libs.picassoVersion"
 
     // Mvp
-    implementation project(':mvp')
+    implementation project(':base-components')
 
     // Tests
     androidTestImplementation "com.android.support.test:runner:$testLibs.androidTestRunnerVersion"

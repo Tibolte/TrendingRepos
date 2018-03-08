@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
-import fr.northborders.mvp.BaseFragmentActivity
+import fr.northborders.basecomponents.BaseFragmentActivity
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import java.io.Serializable

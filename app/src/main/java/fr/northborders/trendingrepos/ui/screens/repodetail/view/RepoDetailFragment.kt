@@ -12,7 +12,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import com.squareup.picasso.Picasso
-import fr.northborders.mvp.BaseFragment
+import fr.northborders.basecomponents.BaseFragment
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
 import fr.northborders.trendingrepos.ui.model.RepoContentViewModel

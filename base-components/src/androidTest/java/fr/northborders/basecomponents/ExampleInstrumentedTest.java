@@ -1,4 +1,4 @@
-package fr.northborders.mvp;
+package fr.northborders.basecomponents;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

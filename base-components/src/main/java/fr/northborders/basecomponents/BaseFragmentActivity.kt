@@ -1,4 +1,4 @@
-package fr.northborders.mvp
+package fr.northborders.basecomponents
 
 import android.support.annotation.IdRes
 import android.support.annotation.LayoutRes

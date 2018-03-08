@@ -1,6 +1,6 @@
 package fr.northborders.trendingrepos.ui.screens.repodetail
 
-import fr.northborders.mvp.BasePresenterLoader
+import fr.northborders.basecomponents.BasePresenterLoader
 import fr.northborders.trendingrepos.ui.model.RepoContentViewModel
 
 interface RepoDetailUi : BasePresenterLoader.Ui {

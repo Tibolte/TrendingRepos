@@ -1,4 +1,4 @@
-package fr.northborders.mvp
+package fr.northborders.basecomponents
 
 interface Presenter<V> {
 
