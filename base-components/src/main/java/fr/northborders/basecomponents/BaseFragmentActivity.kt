@@ -24,7 +24,7 @@ abstract class BaseFragmentActivity : BaseActivity() {
      * to be placed in.
      */
 
-    protected val containerId: Int?
+    protected val containerId: Int
         @IdRes get() = R.id.container
 
     /**
@@ -57,9 +57,6 @@ abstract class BaseFragmentActivity : BaseActivity() {
 
     protected fun replaceFragment(fragment: Fragment) {
         var containerId = R.id.container
-        if (containerId != null) {
-            containerId = containerId
-        }
 
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(containerId, fragment)
