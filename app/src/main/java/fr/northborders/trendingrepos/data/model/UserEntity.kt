@@ -41,4 +41,3 @@ data class UserEntity(
         private const val SITE_ADMIN = "site_admin"
     }
 }
-

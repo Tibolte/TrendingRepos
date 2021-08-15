@@ -1,7 +1,6 @@
 package fr.northborders.basecomponents
 
 interface Presenter<V> {
-
     var ui: V
 
     val isViewAttached: Boolean

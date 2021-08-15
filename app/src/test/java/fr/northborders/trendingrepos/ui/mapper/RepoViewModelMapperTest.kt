@@ -1,8 +1,8 @@
 package fr.northborders.trendingrepos.ui.mapper
 
 import fr.northborders.trendingrepos.domain.model.Repo
-import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.factory.RepoViewModelFactory
+import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4

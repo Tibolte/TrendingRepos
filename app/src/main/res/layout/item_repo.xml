@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView android:id="@+id/repo_card"
+<androidx.cardview.widget.CardView android:id="@+id/repo_card"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -19,12 +19,12 @@
             android:layout_width="@dimen/height_large"
             android:layout_height="@dimen/height_large"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_normal"/>
+            android:layout_marginStart="@dimen/margin_normal"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/repo_owner_avatar"
+            android:layout_toEndOf="@id/repo_owner_avatar"
             android:orientation="vertical"
             android:padding="@dimen/padding_normal">
 
@@ -52,4 +52,4 @@
 
     </RelativeLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

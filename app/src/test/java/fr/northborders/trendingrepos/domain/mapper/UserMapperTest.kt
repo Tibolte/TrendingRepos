@@ -3,10 +3,10 @@ package fr.northborders.trendingrepos.domain.mapper
 import fr.northborders.trendingrepos.data.model.UserEntity
 import fr.northborders.trendingrepos.domain.factory.UserFactory
 import fr.northborders.trendingrepos.domain.model.User
+import junit.framework.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import kotlin.test.assertEquals
 
 @RunWith(JUnit4::class)
 class UserMapperTest {

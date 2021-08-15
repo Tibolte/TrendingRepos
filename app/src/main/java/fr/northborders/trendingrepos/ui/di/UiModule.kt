@@ -11,7 +11,8 @@ import javax.inject.Singleton
 
 @Module
 class UiModule {
-    @Provides @Singleton
+    @Provides
+    @Singleton
     fun providesReposPresenter(getRepos: GetRepos): ReposPresenter =
         ReposPresenter(getRepos)
 

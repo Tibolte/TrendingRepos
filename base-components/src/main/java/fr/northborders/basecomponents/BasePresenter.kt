@@ -3,7 +3,6 @@ package fr.northborders.basecomponents
 import java.lang.ref.WeakReference
 
 abstract class BasePresenter<V : Presenter.Ui> : Presenter<V> {
-
     private var view: WeakReference<V>? = null
 
     override var ui: V

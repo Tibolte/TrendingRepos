@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="fr.northborders.trendingrepos"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.northborders.trendingrepos">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="fr.northborders.trendingrepos.ui.screens.repos.view.ReposActivity">
+        <activity
+            android:name=".ui.screens.repos.view.ReposActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,35 +1,33 @@
 package fr.northborders.basecomponents
 
 import android.os.Bundle
-import android.support.annotation.IdRes
-import android.support.annotation.LayoutRes
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v7.app.ActionBar
-import android.support.v7.widget.Toolbar
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.IdRes
+import androidx.annotation.LayoutRes
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 
-abstract class BaseFragment : Fragment(), Presenter.Ui {
+abstract class BaseFragment: Fragment(), Presenter.Ui {
 
     /**
      * @return the layout id associated to the layout used in the fragment.
      */
-
-    @get:LayoutRes protected abstract val layoutResId: Int
+    @get:LayoutRes
+    protected abstract val layoutResId: Int
 
     /**
      * @return a Toolbar of activity
      */
-
     protected val baseToolbar: Toolbar?
         get() = (activity as BaseActivity).baseToolbar
 
     /**
      * @return the [BaseActivity] if you need the activity context.
      */
-
     protected val baseActivity: BaseActivity
         get() = activity as BaseActivity
 
@@ -46,7 +44,8 @@ abstract class BaseFragment : Fragment(), Presenter.Ui {
      */
 
     protected val activitySupportFragmentManager: FragmentManager
-        get() = activity!!.supportFragmentManager
+        get() = requireActivity().supportFragmentManager
+        //get() = activity!!.supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,7 +103,7 @@ abstract class BaseFragment : Fragment(), Presenter.Ui {
      */
 
     protected fun finishActivity() {
-        activity!!.finish()
+        requireActivity().finish()
     }
 
     /**

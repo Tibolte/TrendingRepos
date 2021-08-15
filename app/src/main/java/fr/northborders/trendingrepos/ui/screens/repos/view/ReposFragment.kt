@@ -1,28 +1,28 @@
 package fr.northborders.trendingrepos.ui.screens.repos.view
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import fr.northborders.basecomponents.BaseFragment
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
+import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.screens.repos.RecyclerScrollMoreListener
 import fr.northborders.trendingrepos.ui.screens.repos.ReposAdapter
-import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.screens.repos.ReposPresenter
 import fr.northborders.trendingrepos.ui.screens.repos.ReposUi
-import fr.northborders.basecomponents.BaseFragment
 import javax.inject.Inject
 
-class ReposFragment : BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadMoreListener {
-
+class ReposFragment: BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadMoreListener {
     override val layoutResId: Int
         get() = R.layout.fragment_repos
 
-    @Inject lateinit var presenter: ReposPresenter
+    @Inject
+    lateinit var presenter: ReposPresenter
 
     lateinit var adapter: ReposAdapter
     var progressbar: ProgressBar? = null
@@ -30,7 +30,7 @@ class ReposFragment : BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoad
     companion object {
         fun newInstance() = ReposFragment()
     }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initDagger()
@@ -85,7 +85,7 @@ class ReposFragment : BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoad
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
         progressbar = view.findViewById(R.id.progressbar)
         setSupportActionBarOnFragment(toolbar)
-        supportActionBar?.title = getString(R.string.android_trending_repos)
+        supportActionBar.title = getString(R.string.android_trending_repos)
     }
 
     fun initDagger() {

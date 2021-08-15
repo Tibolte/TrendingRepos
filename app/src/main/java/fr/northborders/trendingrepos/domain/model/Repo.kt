@@ -66,6 +66,7 @@ data class Repo(
                 repo.watchers,
                 repo.defaultBranch,
                 repo.score,
-                User.Mapper.from(repo.owner))
+                User.Mapper.from(repo.owner)
+            )
     }
 }

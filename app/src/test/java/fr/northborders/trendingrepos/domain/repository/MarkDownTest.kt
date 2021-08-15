@@ -15,7 +15,8 @@ class MarkDownTest {
     @JvmField
     var mockitoRule = MockitoJUnit.rule()!!
 
-    @Mock lateinit var repository: GithubRepository
+    @Mock
+    lateinit var repository: GithubRepository
     private lateinit var markdown: Markdown
 
     @Before

@@ -1,10 +1,10 @@
 package fr.northborders.trendingrepos.domain.repository
 
+import fr.northborders.trendingrepos.data.model.RepoContentEntity
+import fr.northborders.trendingrepos.data.model.WrapList
 import fr.northborders.trendingrepos.data.remote.ApiGithubDataSource
 import fr.northborders.trendingrepos.data.remote.GithubService
 import fr.northborders.trendingrepos.data.remote.MarkdownService
-import fr.northborders.trendingrepos.data.model.RepoContentEntity
-import fr.northborders.trendingrepos.data.model.WrapList
 import fr.northborders.trendingrepos.domain.factory.RepoContentFactory
 import fr.northborders.trendingrepos.domain.factory.RepoFactory
 import io.reactivex.Single
@@ -23,7 +23,8 @@ class GithubRepositoryTest {
 
     @Mock lateinit var githubService: GithubService
     @Mock lateinit var markdownService: MarkdownService
-    @Mock lateinit var dataSource: ApiGithubDataSource
+    @Mock
+    lateinit var dataSource: ApiGithubDataSource
 
     private lateinit var repository: GithubRepository
 

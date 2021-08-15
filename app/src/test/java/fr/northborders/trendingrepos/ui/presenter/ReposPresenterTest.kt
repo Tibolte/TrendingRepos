@@ -3,11 +3,11 @@ package fr.northborders.trendingrepos.ui.presenter
 import fr.northborders.trendingrepos.domain.model.Repo
 import fr.northborders.trendingrepos.domain.repository.GithubRepository
 import fr.northborders.trendingrepos.domain.usecase.GetRepos
+import fr.northborders.trendingrepos.ui.RxAndroidRule
+import fr.northborders.trendingrepos.ui.factory.RepoViewModelFactory
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import fr.northborders.trendingrepos.ui.screens.repos.ReposPresenter
 import fr.northborders.trendingrepos.ui.screens.repos.ReposUi
-import fr.northborders.trendingrepos.ui.RxAndroidRule
-import fr.northborders.trendingrepos.ui.factory.RepoViewModelFactory
 import io.reactivex.Single
 import org.junit.Before
 import org.junit.ClassRule
@@ -30,7 +30,8 @@ class ReposPresenterTest {
     @JvmField
     var mockitoRule = MockitoJUnit.rule()!!
 
-    @Mock lateinit var ui: ReposUi
+    @Mock
+    lateinit var ui: ReposUi
     @Mock lateinit var repository: GithubRepository
     @Mock lateinit var getRepos: GetRepos
 

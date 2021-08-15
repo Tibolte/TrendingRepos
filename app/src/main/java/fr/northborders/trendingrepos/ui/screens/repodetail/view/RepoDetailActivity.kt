@@ -3,8 +3,8 @@ package fr.northborders.trendingrepos.ui.screens.repodetail.view
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.annotation.LayoutRes
-import android.support.v4.app.Fragment
+import androidx.annotation.LayoutRes
+import androidx.fragment.app.Fragment
 import fr.northborders.basecomponents.BaseFragmentActivity
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
@@ -21,7 +21,7 @@ class RepoDetailActivity : BaseFragmentActivity() {
         super.onCreate(savedInstanceState)
         val intent = intent
         if (intent.hasExtra(BUNDLE_EXTRA_REPO)) {
-            val repo: Serializable = intent.getSerializableExtra(BUNDLE_EXTRA_REPO)
+            val repo: Serializable? = intent.getSerializableExtra(BUNDLE_EXTRA_REPO)
             replaceFragment(RepoDetailFragment.newInstance(repo as RepoViewModel))
         }
     }

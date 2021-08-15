@@ -1,14 +1,13 @@
 package fr.northborders.basecomponents
 
-import android.support.annotation.IdRes
-import android.support.annotation.LayoutRes
-import android.support.v4.app.Fragment
+import androidx.annotation.IdRes
+import androidx.annotation.LayoutRes
+import androidx.fragment.app.Fragment
 
-abstract class BaseFragmentActivity : BaseActivity() {
-
+abstract class BaseFragmentActivity: BaseActivity() {
     /**
-     * @return nested target fragment
-     */
+    * @return nested target fragment
+    */
     var nestedTargetFragment: Fragment? = null
         private set
 
@@ -45,13 +44,13 @@ abstract class BaseFragmentActivity : BaseActivity() {
     private fun initFragment() {
         val fragmentManager = supportFragmentManager
         var containerId = R.id.container
-        if (containerId != null) {
+        //if (containerId != null) {
             containerId = containerId
-        }
-        nestedTargetFragment = fragmentManager.findFragmentById(containerId!!)
+        //}
+        //nestedTargetFragment = fragmentManager.findFragmentById(containerId)
         if (nestedTargetFragment == null) {
             nestedTargetFragment = fragmentInstance
-            fragmentManager.beginTransaction().add(containerId!!, nestedTargetFragment).commit()
+            fragmentManager.beginTransaction().add(containerId, fragmentInstance).commit()
         }
     }
 

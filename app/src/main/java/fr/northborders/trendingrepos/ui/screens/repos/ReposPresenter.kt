@@ -1,7 +1,7 @@
 package fr.northborders.trendingrepos.ui.screens.repos
 
-import fr.northborders.trendingrepos.domain.usecase.GetRepos
 import fr.northborders.basecomponents.BasePresenterLoader
+import fr.northborders.trendingrepos.domain.usecase.GetRepos
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable

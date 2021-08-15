@@ -1,8 +1,8 @@
 package fr.northborders.trendingrepos.ui.screens.repos
 
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerScrollMoreListener constructor(layoutManager: LinearLayoutManager, loadMoreListener: OnLoadMoreListener): RecyclerView.OnScrollListener() {
 
@@ -12,7 +12,7 @@ class RecyclerScrollMoreListener constructor(layoutManager: LinearLayoutManager,
     var loading = true
     val layoutManager: RecyclerView.LayoutManager = layoutManager
 
-    override fun onScrolled(view: RecyclerView?, dx: Int, dy: Int) {
+    override fun onScrolled(view: RecyclerView, dx: Int, dy: Int) {
         if (layoutManager != null) {
             var lastVisibleItemPosition = 0
             val totalItemCount = layoutManager.itemCount
@@ -38,7 +38,7 @@ class RecyclerScrollMoreListener constructor(layoutManager: LinearLayoutManager,
                 Log.d(RecyclerScrollMoreListener::class.simpleName, "shouldLoad More")
                 Log.d(RecyclerScrollMoreListener::class.simpleName, String.format("current page: %d", currentPage))
                 Log.d(RecyclerScrollMoreListener::class.simpleName, String.format("lastVisibleItemPosition: %d", lastVisibleItemPosition))
-                loadMoreListener?.onLoadMore(currentPage, totalItemCount)
+                loadMoreListener.onLoadMore(currentPage, totalItemCount)
                 loading = true
             }
         }

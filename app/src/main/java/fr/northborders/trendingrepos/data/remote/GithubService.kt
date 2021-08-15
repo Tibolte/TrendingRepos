@@ -3,7 +3,9 @@ package fr.northborders.trendingrepos.data.remote
 import fr.northborders.trendingrepos.data.model.RepoContentEntity
 import fr.northborders.trendingrepos.data.model.WrapList
 import io.reactivex.Single
-import retrofit2.http.*
+import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface GithubService {
     @GET("search/repositories")

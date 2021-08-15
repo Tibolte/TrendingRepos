@@ -16,7 +16,8 @@ class GetReposTest {
     @JvmField
     var mockitoRule = MockitoJUnit.rule()!!
 
-    @Mock lateinit var repository: GithubRepository
+    @Mock
+    lateinit var repository: GithubRepository
     private lateinit var getRepos: GetRepos
 
     @Before

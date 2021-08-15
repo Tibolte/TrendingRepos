@@ -33,7 +33,8 @@ class RepoDetailPresenterTest {
     @Mock lateinit var ui: RepoDetailUi
     @Mock lateinit var repository: GithubRepository
     @Mock lateinit var getReadme: GetReadme
-    @Mock lateinit var markdown : Markdown
+    @Mock
+    lateinit var markdown : Markdown
 
     private lateinit var presenter: RepoDetailPresenter
 

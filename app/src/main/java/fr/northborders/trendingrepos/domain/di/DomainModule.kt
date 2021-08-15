@@ -25,7 +25,8 @@ class DomainModule {
     fun providesGetReadme(githubRepository: GithubRepository): GetReadme =
         GetReadme(githubRepository)
 
-    @Provides @Singleton
+    @Provides
+    @Singleton
     fun providesMarkdown(githubRepository: GithubRepository): Markdown =
         Markdown(githubRepository)
 }

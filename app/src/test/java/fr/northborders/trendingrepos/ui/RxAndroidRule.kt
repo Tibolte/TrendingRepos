@@ -5,7 +5,7 @@ import io.reactivex.schedulers.Schedulers
 import org.junit.runner.Description
 import org.junit.runners.model.Statement
 
-open class RxAndroidRule : RxJavaRule() {
+open class RxAndroidRule: RxJavaRule() {
     override fun apply(base: Statement, description: Description): Statement {
         return object : Statement() {
             @Throws(Throwable::class)

@@ -8,7 +8,7 @@ import fr.northborders.trendingrepos.ui.screens.repodetail.view.RepoDetailFragme
 import fr.northborders.trendingrepos.ui.screens.repos.view.ReposFragment
 import javax.inject.Singleton
 
-@Component(modules = arrayOf(DataModule::class, DomainModule::class, UiModule::class))
+@Component(modules = [DataModule::class, DomainModule::class, UiModule::class])
 @Singleton
 interface AppComponent {
     fun inject(reposFragment: ReposFragment)

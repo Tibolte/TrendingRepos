@@ -1,7 +1,6 @@
 package fr.northborders.trendingrepos.ui.screens.repodetail.view
 
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
 import android.util.Base64
 import android.util.Log
 import android.view.View
@@ -11,6 +10,7 @@ import android.webkit.WebViewClient
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import com.squareup.picasso.Picasso
 import fr.northborders.basecomponents.BaseFragment
 import fr.northborders.trendingrepos.R
@@ -30,7 +30,8 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
     var progressbar: ProgressBar? = null
     lateinit var webView: WebView
     lateinit var errorView: TextView
-    @Inject lateinit var presenter: RepoDetailPresenter
+    @Inject
+    lateinit var presenter: RepoDetailPresenter
 
     companion object {
         val BUNDLE_EXTRA_REPO = "bundle_extra_repo"
@@ -106,13 +107,13 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
 
         val toolbar = view.findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBarOnFragment(toolbar)
-        supportActionBar?.title = repo?.name
+        supportActionBar.title = repo?.name
 
         view.findViewById<TextView>(R.id.repo_name).text = repo?.name
         view.findViewById<TextView>(R.id.repo_desc).text = repo?.description
         view.findViewById<TextView>(R.id.repo_stars).text = String.format(getString(R.string.title_star), repo?.starGazersCount)
         view.findViewById<TextView>(R.id.repo_fork).text = String.format(getString(R.string.title_fork), repo?.forksCount)
-        Picasso.with(context).load(repo?.owner?.avatarUrl).into(view.findViewById<ImageView>(R.id.repo_owner_avatar))
+        Picasso.get().load(repo?.owner?.avatarUrl).into(view.findViewById<ImageView>(R.id.repo_owner_avatar))
 
         progressbar = view.findViewById(R.id.loadingView)
 

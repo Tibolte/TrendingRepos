@@ -6,7 +6,7 @@ import fr.northborders.trendingrepos.ui.model.UserViewModel
 
 class UserViewModelFactory {
     companion object {
-        fun makeUser(): User  {
+        fun makeUser(): User {
             return User(
                 DataFactory.randomString(),
                 DataFactory.randomInt(),

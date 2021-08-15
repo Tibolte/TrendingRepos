@@ -1,11 +1,11 @@
 package fr.northborders.basecomponents
 
 import android.os.Bundle
-import android.support.annotation.LayoutRes
-import android.support.v7.app.ActionBar
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
-import fr.northborders.basecomponents.StringsUtils.EXTRA_ARGUMENTS
+import androidx.annotation.LayoutRes
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import fr.northborders.basecomponents.StringUtils.EXTRA_ARGUMENTS
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -19,7 +19,6 @@ abstract class BaseActivity : AppCompatActivity() {
     /**
      * @return the layout id associated to the layout used in the activity.
      */
-
     @get:LayoutRes protected abstract val layoutResId: Int
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +34,6 @@ abstract class BaseActivity : AppCompatActivity() {
      * Toolbar will be configured like a [ActionBar] if exists in the layout
      * if it doesn't exist will be ignored
      */
-
     private fun initSupportActionBar() {
         baseToolbar = findViewById<Toolbar>(R.id.toolbar)
         if (baseToolbar != null) {
@@ -48,7 +46,6 @@ abstract class BaseActivity : AppCompatActivity() {
      * Called just after bindViews.
      * Override this method to configure your [ActionBar]
      */
-
     protected fun onSetupSupportActionBar(actionBar: ActionBar?) {
 
     }
@@ -57,7 +54,6 @@ abstract class BaseActivity : AppCompatActivity() {
      * Called after to start ui state.
      * Override this method to configure your presenter with extra data if needed.
      */
-
     protected fun initArguments(savedInstanceState: Bundle?) {
         if (savedInstanceState != null && savedInstanceState.containsKey(EXTRA_ARGUMENTS)) {
             activityArguments = savedInstanceState.getBundle(EXTRA_ARGUMENTS)
@@ -70,7 +66,6 @@ abstract class BaseActivity : AppCompatActivity() {
      * Called before to start all the presenter instances linked to the component lifecycle.
      * Override this method to configure your presenter with extra data if needed.
      */
-
     protected fun initPresenter() {
 
     }
@@ -79,7 +74,6 @@ abstract class BaseActivity : AppCompatActivity() {
      * Called just after setContentView.
      * Override this method to configure your activity or start views
      */
-
     protected open fun initActivity() {
 
     }
