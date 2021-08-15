@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="701648cc-9f8a-40e4-91b3-33c118517bf8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/fr/northborders/trendingrepos/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/markdown_css_theme/classic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/AppComponent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/TrendingReposApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/di/DataModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/model/RepoContentEntity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/model/RepoEntity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/model/UserEntity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/model/WrapList.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/remote/ApiGithubDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/remote/GithubService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/data/remote/MarkdownService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/di/DomainModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/model/Repo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/model/RepoContent.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/model/User.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/repository/GithubRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/repository/Repository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/usecase/GetReadme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/usecase/GetRepos.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/domain/usecase/Markdown.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/di/UiModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/model/RepoContentViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/model/RepoViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/model/UserViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repodetail/RepoDetailPresenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repodetail/RepoDetailUi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repodetail/view/RepoDetailActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repodetail/view/RepoDetailFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/RecyclerScrollMoreListener.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/RepoViewHolder.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/ReposAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/ReposPresenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/ReposUi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/view/ReposActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/fr/northborders/trendingrepos/ui/screens/repos/view/ReposFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_base.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_repo_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_repos.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_repo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_error.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_loading.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/factory/DataFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/factory/RepoContentFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/factory/RepoFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/factory/UserFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/mapper/RepoContentMapperTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/mapper/RepoMapperTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/mapper/UserMapperTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/repository/GetReadmeTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/repository/GetReposTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/repository/GithubRepositoryTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/domain/repository/MarkDownTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/RxAndroidRule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/RxJavaRule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/factory/RepoContentViewModelFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/factory/RepoViewModelFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/factory/UserViewModelFactory.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/mapper/RepoContentViewModelMapperTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/mapper/RepoViewModelMapperTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/mapper/UserViewModelMapperTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/presenter/RepoDetailPresenterTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/fr/northborders/trendingrepos/ui/presenter/ReposPresenterTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/androidTest/java/fr/northborders/basecomponents/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/BaseActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/BaseFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/BaseFragmentActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/BasePresenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/BasePresenterLoader.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/Presenter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/java/fr/northborders/basecomponents/StringsUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/res/layout/default_container.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base-components/src/test/java/fr/northborders/basecomponents/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wZeFW6a5vTnUzzX6o1PsIswGvz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="701648cc-9f8a-40e4-91b3-33c118517bf8" name="Default Changelist" comment="" />
+      <created>1628670434690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628670434690</updated>
+    </task>
+    <servers />
+  </component>
+</project>
