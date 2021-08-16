@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import com.squareup.picasso.Picasso
+import coil.load
 import fr.northborders.basecomponents.BaseFragment
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
@@ -113,7 +113,7 @@ class RepoDetailFragment: BaseFragment(), RepoDetailUi {
         view.findViewById<TextView>(R.id.repo_desc).text = repo?.description
         view.findViewById<TextView>(R.id.repo_stars).text = String.format(getString(R.string.title_star), repo?.starGazersCount)
         view.findViewById<TextView>(R.id.repo_fork).text = String.format(getString(R.string.title_fork), repo?.forksCount)
-        Picasso.get().load(repo?.owner?.avatarUrl).into(view.findViewById<ImageView>(R.id.repo_owner_avatar))
+        view.findViewById<ImageView>(R.id.repo_owner_avatar).load(repo?.owner?.avatarUrl)
 
         progressbar = view.findViewById(R.id.loadingView)
 
