@@ -9,11 +9,7 @@ import fr.northborders.trendingrepos.ui.model.RepoViewModel
 
 class ReposAdapter: RecyclerView.Adapter<RepoViewHolder>() {
 
-    private var reposList: List<RepoViewModel>
-
-    init {
-        reposList = ArrayList<RepoViewModel>()
-    }
+    private var reposList: List<RepoViewModel> = ArrayList()
 
     override fun getItemCount() = reposList.size
 

@@ -5,12 +5,14 @@ import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import fr.northborders.basecomponents.BaseFragment
 import fr.northborders.trendingrepos.R
 import fr.northborders.trendingrepos.TrendingReposApplication
 import fr.northborders.trendingrepos.ui.model.RepoViewModel
+import fr.northborders.trendingrepos.ui.model.ReposViewModel
 import fr.northborders.trendingrepos.ui.screens.repos.RecyclerScrollMoreListener
 import fr.northborders.trendingrepos.ui.screens.repos.ReposAdapter
 import fr.northborders.trendingrepos.ui.screens.repos.ReposPresenter
@@ -27,6 +29,8 @@ class ReposFragment: BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadM
     lateinit var adapter: ReposAdapter
     var progressbar: ProgressBar? = null
 
+    private lateinit var reposViewModel: ReposViewModel
+
     companion object {
         fun newInstance() = ReposFragment()
     }
@@ -34,6 +38,7 @@ class ReposFragment: BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadM
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initDagger()
+        reposViewModel = ViewModelProvider(this)[ReposViewModel::class.java]
     }
 
     override fun initPresenter() {
@@ -55,7 +60,9 @@ class ReposFragment: BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadM
 
     override fun showRepos(reposList: List<RepoViewModel>) {
         Log.d(ReposFragment::class.simpleName, "show repos")
+
         adapter.addReposList(reposList)
+        reposViewModel.addRepos(reposList)
     }
 
     override fun showEmptyMessage() {
@@ -94,13 +101,16 @@ class ReposFragment: BaseFragment(), ReposUi, RecyclerScrollMoreListener.OnLoadM
 
     fun initAdapter() {
         adapter = ReposAdapter()
+//        if (adapter.itemCount > 0) {
+//
+//        }
     }
 
     fun initRecycler(view: View) {
         val recyclerview = view.findViewById<RecyclerView>(R.id.list_repos)
         val layoutManager = LinearLayoutManager(activity)
         recyclerview.layoutManager = layoutManager
-        recyclerview.adapter = adapter
         recyclerview.addOnScrollListener(RecyclerScrollMoreListener(layoutManager, this))
+        recyclerview.adapter = adapter
     }
 }
